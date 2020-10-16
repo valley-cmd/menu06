@@ -1,0 +1,96 @@
+/*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.menu__btn  .btn__gnavi {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 3;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+}
+.menu__btn span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #666;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+}
+.menu__btn span:nth-child(1) {
+    top: 0
+}
+.menu__btn span:nth-child(2) {
+    top: 10px
+}
+.menu__btn span:nth-child(3) {
+    top: 20px
+}
+.menu__btn.open span {
+    background: #484848;
+}
+.menu__btn.open span {
+    width: 24px;
+}
+
+
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 260px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd;
+}
+
+.menu__item{
+  width: 100%;
+  height: auto;
+  padding: .5em 2em;
+  text-align: right;
+  color: #484848;
+  box-sizing: border-box;
+  font-size: 1.6em;
+  letter-spacing: 0.1em;
+}
+
+
+
+/*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+/* アニメーション前のメニューの状態 */
+.menu{
+  transform: translateX(100vw);
+  transition: all .3s linear;
+}
+/* アニメーション後のメニューの状態 */
+.menu.is-active{
+  transform: translateX(0);
+}
+
+/*コンテンツエリア*/
+.area {
+  width:100%;
+  height:50vh;
+
+}
+
+.box {
+  height:10vh;
+    background-color: gainsboro;
+}
